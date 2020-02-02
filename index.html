@@ -9,22 +9,17 @@
   </head>
   <body>
     <div class="container">
-      <header class="menu">
-        <button id="menu-btn" class="menu__btn" href="#">
-          <img
-            class="menu__btn--logo"
-            src="assets/icon menu.png"/>
-        </button>
-        <nav>
-          <ul class="submenu" id="menu-list">
-            <li class="submenu__item"><a href="#tecnica">Técnicas</a></li>
-            <li class="submenu__item"><a href="#artistas">Artistas</a></li>
-            <li class="submenu__item"><a href="#contact">Contato</a></li>
+      <header>
+        <nav >
+          <ul class="menu">
+            <li class="menu__item"><a href="#tecnica">Técnicas</a></li>
+            <li class="menu__item"><a href="#artistas">Artistas</a></li>
+            <li class="menu__item"><a href="#contact">Contato</a></li>
           </ul>
         </nav>
       </header>
 
-      <section class="parallax bg1">
+      <section class="parallax bg1" >
         <div class="parallax__text flexbox">
           <div class="parallax__text--banner ">
             <p>ARTE</p>
@@ -125,15 +120,8 @@
           <button class="btn__form btn-style" type="submit">Enviar</button>
         </div>
       </section>
+      <footer class="flexbox">
+          <p><a href="https://github.com/figueiredocamila">Powered by Camila Figueiredo</a></p>
     </div>
-    <script>
-      var menuBtn = document.getElementById("menu-btn");
-      var menuList = document.getElementById("menu-list");
-      
-      menuBtn.addEventListener("click", function(event) {
-        event.preventDefault();
-        menuList.classList.toggle("is-open");
-      })
-    </script>
   </body>
 </html>
