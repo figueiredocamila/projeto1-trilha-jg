@@ -1,4 +1,4 @@
-﻿# Jogo da Cobrinha - Desafio Jovens Gênios
+﻿# Projeto 1 - Design responsivo de uma página - Desafio Jovens Gênios
 Este primeiro projeto da trilha de aprendizagem da empresa Jovens Gênios consiste no desenvolvimento de uma única página web responsiva, utilizando apenas HTML e CSS.
 
 ## Conteúdo Obrigatório
