@@ -1,0 +1,348 @@
+/* SET UP GERAL */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: 300;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  background-color: #DFDEDC;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+.container {
+  margin: 0 auto;
+  width: 100vw;
+}
+
+.flexbox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-style {
+  background-color: rgba(108, 92, 77, 0.9);
+  color: #fff;
+  border-color: transparent;
+  border-radius: 0.6rem;
+  cursor: pointer;
+}
+
+.btn-style:hover {
+  background-color: rgb(108, 92, 77);
+}
+
+/* MENU */
+
+.menu {
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
+.menu__btn {
+  position: absolute;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.menu__btn--logo {
+  width: 50px;
+  z-index: 2;
+  margin: 1rem;
+  padding: 0.5rem;
+  float: right;
+  background-color: #DFDEDC;
+  border-radius: 50%;
+}
+
+.submenu {
+  display: none;
+  text-align: center;
+  width: 100%;
+  background-color: rgba(223, 222, 220, 0.7);
+}
+
+.submenu.is-open {
+  display: block;
+}
+
+.submenu__item a {
+  line-height: 6rem;
+  font-size: 2rem;
+  color: #000;
+  font-weight: 400;
+}
+
+.submenu__item:hover {
+  background-color: #DFDEDC;
+}
+
+/* PARALLAX BACKGROUND */
+
+.parallax {
+  display: block;
+  position: relative;
+  width: 100%;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 500px;
+}
+
+.bg1 {
+  background-image: url(../assets/paralax1.jpg);
+}
+
+.bg2 {
+  background-image: url(../assets/paralax2.jpg);
+}
+
+.bg3 {
+  background-image: url(../assets/paralax3.jpg);
+}
+
+.parallax__text {
+  height: 50rem;
+}
+
+.parallax__text--banner {
+  width: 80%;
+  text-align: center;
+  background-color: rgba(223, 222, 220, 0.6);
+  border: 4px solid #fff;
+}
+
+.parallax__text p {
+  padding: 2rem;
+  font-size: 2rem;
+  font-weight: 400;
+}
+
+.parallax__text p:last-child {
+  padding-top: 0;
+}
+
+.banner__frase {
+  text-align: right;
+}
+
+.banner__autor {
+  text-align: right;
+  font-size: 1.5rem !important;
+}
+
+/* TECNICAS */
+
+.card {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  width: auto;
+  height: auto;
+  margin: 1rem;
+  margin-bottom: 0;
+  background-color: #fff;
+}
+
+.card:last-child {
+  margin-bottom: 1rem;
+}
+
+.card__btn {
+  margin: 1rem;
+}
+
+.card button {
+  max-width: 100%;
+  height: 50%;
+  font-size: 2rem;
+  padding: 0.5rem;
+}
+
+/* ARTISTAS */
+
+.description {
+  width: 100%;
+  padding: 1rem;
+}
+
+.name {
+  font-size: 2rem;
+  text-align: center;
+  padding-bottom: 1rem;
+  font-weight: 400;
+}
+
+.about {
+  text-align: justify;
+  font-size: 1.5rem;
+}
+
+/* FORMULARIO DE CONTATO */
+
+form {
+  width: 80%;
+  padding: 2rem 0;
+}
+
+.contact__title {
+  font-size: 2rem;
+  font-weight: 400;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 500px;
+}
+
+input,
+textarea {
+  font-size: 1.5rem;
+  width: 100%;
+  padding: 0.5rem;
+  margin: 1rem 0;
+  resize: none;
+  background-color: rgba(223, 222, 220, 0.6);
+  border: 0px solid transparent;
+  border-radius: 0.5rem;
+}
+
+.btn__form {
+  width: auto;
+  padding: 1rem 2rem;
+  font-size: 1.5rem;
+  border-radius: 2.5rem;
+}
+
+/* DESIGN RESPONSIVO: TABLETS */
+
+@media (min-width: 768px) {
+  html {
+    font-size: 12px;
+  }
+
+  .flexbox {
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+  }
+  
+  /* PARALLAX BACKGROUND */
+  
+  .parallax__text--banner {
+  width: 60%;
+  }
+
+  /* TECNICAS E ARTISTAS */
+
+  .card {
+    max-width: calc(50% - 1rem);
+    flex-basis: calc(50% - 1rem);
+    margin-top: 1rem;
+    margin: 1rem 0;
+  }
+
+  .card:nth-child(3) {
+    margin-top: 0;
+  }
+  .card:nth-child(4) {
+    margin-top: 0;
+  }
+
+  .craftman {
+    align-items: stretch;
+  }
+
+  .lastcard {
+    flex: 1;
+    max-width: 100%;
+    margin: 0.7rem;
+  }
+}
+
+/* DESIGN RESPONSIVO: SMALL DESKTOPS */
+
+@media (min-width: 1024px) {
+
+  /* MENU */
+  
+  .menu__btn {
+    display: none;
+  }
+
+  .submenu {
+    display: flex;
+    justify-content: flex-end;
+    background-color: rgba(223, 222, 220);
+  }
+
+  .submenu__item a {
+    padding: 2rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+
+  .submenu__item a:hover {
+    color: #fff;
+  }
+
+  /* PARALLAX BACKGROUND */
+
+  .parallax__text--banner {
+    width: 40%
+  }
+  
+  /* TECNICAS E ARTISTAS */
+  
+  .card {
+    margin-top: 1rem;
+    margin: 1rem 0;
+    max-width: calc(25% - 1rem);
+  }
+
+  .card:nth-child(3) {
+    margin-top: 1rem;
+  }
+  .card:nth-child(4) {
+    margin-top: 1rem;
+  }
+
+  .card--1024 {
+    max-width: calc(33% - 1rem);
+  }
+
+  /* FORMULARIO DE CONTATO */
+
+  form {
+    width: 50%;
+  }
+}

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="UTF-8" />
+    <title>Trilha 1</title>
+    <link rel="stylesheet" href="css/index.css" />
+    <link href="https://fonts.googleapis.com/css?family=Bad+Script&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="container">
+      <header class="menu">
+        <button id="menu-btn" class="menu__btn" href="#">
+          <img
+            class="menu__btn--logo"
+            src="assets/icon menu.png"/>
+        </button>
+        <nav>
+          <ul class="submenu" id="menu-list">
+            <li class="submenu__item"><a href="#tecnica">Técnicas</a></li>
+            <li class="submenu__item"><a href="#artistas">Artistas</a></li>
+            <li class="submenu__item"><a href="#contact">Contato</a></li>
+          </ul>
+        </nav>
+      </header>
+
+      <section class="parallax bg1">
+        <div class="parallax__text flexbox">
+          <div class="parallax__text--banner ">
+            <p>ARTE</p>
+            <p>CONTEMPORÂNEA</p>
+          </div>
+        </div>
+      </section>
+      <section class="flexbox" id="tecnica">
+        <article class="card">
+          <img src="assets/bordado.jpg" />
+          <div class="card__btn flexbox">
+            <button class="btn-style">Bordado Livre</button>
+          </div>
+        </article>
+        <article class="card">
+          <img src="assets/escultura.jpg" />
+          <div class="card__btn flexbox">
+            <button class="btn-style">Escultura</button>
+          </div>
+        </article>
+        <article class="card">
+          <img src="assets/aquarela.jpg" />
+          <div class="card__btn flexbox">
+            <button class="btn-style">Aquarela</button>
+          </div>
+        </article>
+        <article class="card">
+          <img src="assets/macrame.jpg" />
+          <div class="card__btn flexbox">
+            <button class="btn-style">Macramê</button>
+          </div>
+        </article>
+      </section>
+      <section class="parallax bg2">
+        <div class="parallax__text flexbox">
+          <div class="parallax__text--banner">
+            <p class="banner__frase">
+              "Não existe estilo para a arte moderna, mas diversas
+              possibilidades de dar forma à imagem, o que se expressa por
+              surgirem num mesmo período vários movimentos, muitas vezes
+              contraditórios entre si."
+            </p>
+            <p class="banner__autor">Carlos Zilio</p>
+          </div>
+        </div>
+      </section>
+      <section class="flexbox craftman" id="artistas">
+        <article class="card card--1024">
+          <img src="assets/artista1.jpg" />
+          <div class="description">
+            <p class="name">TÁCITO FERNANDES</p>
+            <p class="about">
+              Tácito Fernandes, do Recife – Pernambuco, durante anos foi diretor
+              de arte, como publicitário. Em 2000 largou tudo para se dedicar a
+              cerâmica. Em 2005 abriu seu atelier. Apresenta seu trabalho em
+              grandes centros culturais como Milão, Paris, Madrid, Frankfurt,
+              Viena e São Paulo. Um dos mais reconhecidos ceramistas
+              contemporâneos do nosso tempo. O que diferencia Tácito Fernandes
+              de muitos é sua preocupação com a união da arte.
+            </p>
+          </div>
+        </article>
+        <article class="card card--1024 ">
+          <img src="assets/artista2.jpg" />
+          <div class="description">
+            <p class="name">KAREN DOLORES</p>
+            <p class="about">
+              Transitando entre a capital paulista e carioca, a artista Karen
+              Dolorez mescla o grafite com o crochê, sendo as linhas um
+              complemento delicado, mas em alto-relevo, à sua pintura. São
+              trabalhos inspirados em poesias ou músicas.
+            </p>
+          </div>
+        </article>
+        <article class="card lastcard card--1024">
+          <img src="assets/artista3.jpg" />
+          <div class="description">
+            <p class="name">LOUI JOVER</p>
+            <p class="about">
+              O artista Loui Jover encontrou uma superfície inovadora para
+              trabalhar: 20 páginas arrancadas de livros antigos e coladas uma
+              na outra. Através da experimentação, ele descobriu que o grau de
+              absorção desses papéis antigos é adequado para a técnica de aguada
+              com nanquim. O amarelamento natural das páginas torna a imagem
+              mais interessante.
+            </p>
+          </div>
+        </article>
+      </section>
+      <section class="parallax bg3">
+        <div id="contact" class="form">
+          <p class="contact__title">Contato</p>
+          <form action="form.php" method="POST">
+            <p><input type="text" name="nome" id="a" placeholder="Nome" size="20" /></p>
+            <p><input type="email" name="email" id="b" placeholder="E-mail" size="20" /></p>
+            <textarea rows="5" cols="25" placeholder="Mensagem" maxlength="100"></textarea>
+          </form>
+          <button class="btn__form btn-style" type="submit">Enviar</button>
+        </div>
+      </section>
+    </div>
+    <script>
+      var menuBtn = document.getElementById("menu-btn");
+      var menuList = document.getElementById("menu-list");
+      
+      menuBtn.addEventListener("click", function(event) {
+        event.preventDefault();
+        menuList.classList.toggle("is-open");
+      })
+    </script>
+  </body>
+</html>
